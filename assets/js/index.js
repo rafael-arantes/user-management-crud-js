@@ -15,7 +15,7 @@ $("#update_user").submit(function (event) {
   console.log(data);
 
   var request = {
-    url: `user-management-crud-js.vercel.app/api/users/${data.id}`,
+    url: `https://user-management-crud-n7pndcvkr-rafael-arantes.vercel.app/api/users/${data.id}`,
     method: "PUT",
     data: data,
   };
@@ -31,7 +31,7 @@ if (window.location.pathname == "/") {
     var id = $(this).attr("data-id");
 
     var request = {
-      url: `user-management-crud-js.vercel.app/api/users/${id}`,
+      url: `https://user-management-crud-n7pndcvkr-rafael-arantes.vercel.app/api/users/${id}`,
       method: "DELETE",
     };
 

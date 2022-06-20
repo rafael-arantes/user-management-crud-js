@@ -3,7 +3,9 @@ const axios = require("axios");
 exports.homeRoutes = (req, res) => {
   // Make a get request to /api/users
   axios
-    .get("user-management-crud-js.vercel.app/api/users")
+    .get(
+      "https://user-management-crud-n7pndcvkr-rafael-arantes.vercel.app/api/users"
+    )
     .then(function (response) {
       res.render("index", { users: response.data });
     })
@@ -18,9 +20,12 @@ exports.add_user = (req, res) => {
 
 exports.update_user = (req, res) => {
   axios
-    .get("user-management-crud-js.vercel.app/api/users", {
-      params: { id: req.query.id },
-    })
+    .get(
+      "https://user-management-crud-n7pndcvkr-rafael-arantes.vercel.app/api/users",
+      {
+        params: { id: req.query.id },
+      }
+    )
     .then(function (userdata) {
       res.render("update_user", { user: userdata.data });
     })
