@@ -15,7 +15,7 @@ $("#update_user").submit(function (event) {
   console.log(data);
 
   var request = {
-    url: `http://localhost:3000/api/users/${data.id}`,
+    url: `user-management-crud-js.vercel.app/api/users/${data.id}`,
     method: "PUT",
     data: data,
   };
@@ -31,7 +31,7 @@ if (window.location.pathname == "/") {
     var id = $(this).attr("data-id");
 
     var request = {
-      url: `http://localhost:3000/api/users/${id}`,
+      url: `user-management-crud-js.vercel.app/api/users/${id}`,
       method: "DELETE",
     };
 
